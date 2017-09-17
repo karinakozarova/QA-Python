@@ -20,8 +20,16 @@ def ingredient_exists(ingr, dict):
     if dict.has_key(ingr):
         return True
 
-# def fatten_pancakes(dict):
+def fatten_pancakes(dict):
+    dict2 = dict.copy()
+    dict2["eggs"] = 6
+    dict2["butter"] = True
+    return dict2
 
+def add_sugar(dict):
+    dict2 = dict.copy()
+    dict2["sugar"] = 1
+    return dict2
 
 IS_TRUE = True
 IS_FALSE = False
