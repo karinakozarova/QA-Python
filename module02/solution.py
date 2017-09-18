@@ -37,12 +37,18 @@ def remove_salt(dict):
     return dict2
 
 def add_fibonacci(lst):
-    next = lst[lst.length - 1] + lst[lst.length-2]
-    lst.extend[next]
+    lisst = len(lst)
+    next_fib = lst[lisst - 1] + lst[lisst-2]
+    lst.append(next_fib)
     return lst
 
 def fib_exists(lst, n):
-    
+    for x in range(0,len(lst)):
+        if n == lst[x]:
+            return True
+
+    return False
+
 IS_TRUE = True
 IS_FALSE = False
 
