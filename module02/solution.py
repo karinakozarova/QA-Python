@@ -17,9 +17,10 @@ def num_rem(a,b):
     return a%b
 
 def ingredient_exists(ingr, dict):
-    if dict.has_key(ingr):
+    if ingr in dict:
         return True
-
+    else:
+        return False
 def fatten_pancakes(dict):
     dict2 = dict.copy()
     dict2["eggs"] = 6
@@ -46,9 +47,12 @@ def fib_exists(lst, n):
     for x in range(0,len(lst)):
         if n == lst[x]:
             return True
-
     return False
 
+def which_fib(lst, n):
+    for x in range(0,len(lst)):
+        if n == x:
+            return x
 IS_TRUE = True
 IS_FALSE = False
 
