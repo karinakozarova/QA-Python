@@ -14,7 +14,7 @@ def num_floor(a,b):
     return a//b
 
 def num_rem(a,b):
-    return a%b
+    return a % b
 
 def ingredient_exists(ingr, dict):
     if ingr in dict:
@@ -50,11 +50,12 @@ def fib_exists(lst, n):
     return False
 
 def which_fib(lst, n):
-    for x in range(0,len(lst)):
-        if n == x:
+    for x in range(0, len(lst)):
+        if n == lst[x-1]:
             return x
+
 IS_TRUE = True
 IS_FALSE = False
 
-PANCAKE_INGREDIENTS = {"flour" : 2, "eggs" : 4, "milk" : 200, "butter": False, "salt": 0.001}
+PANCAKE_INGREDIENTS = {"flour" : 2, "eggs" : 4, "milk": 200, "butter": False, "salt": 0.001}
 FIBONACCI_NUMBERS = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
