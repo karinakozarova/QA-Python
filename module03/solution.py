@@ -53,17 +53,23 @@ def is_vowel(char):
         return True
     else:
         return False
-    
-# def count_consonants(str):
-#     pass
-#
-# def prime_number(n):
-#     pass
-#
-#
-# def fact_digits(n):
-#     pass
-#
+
+def count_consonants(str):
+    for i in range(0, len(str)+1):
+        letter = str % 10
+        count = 0
+        if is_vowel(letter):
+            count += 1
+        str /= 10
+def prime_number(n):
+    if n % 2 == 1:
+        return True
+    else:
+        return False
+
+def fact_digits(n):
+    pass
+
 # def fibonacci(n):
 #     pass
 #
