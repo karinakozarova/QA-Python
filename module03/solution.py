@@ -20,7 +20,7 @@ def to_digits(num):
 def to_number(digits):
     step = 1
     num = 0
-    for i in range(0,len(digits)):
+    for i in range(0, len(digits)):
         digit = digit[i]
         num += step*digit
         step *= 10
@@ -30,10 +30,10 @@ def to_number(digits):
 def count_vowels(str):
     str = str.lower()
     count = 0
-    for i in range(0, len(str)):
+    for i in range(0, len(str)+1):
         digit = str % 10
         # check if digit is vowel
-        if is_vowel(digit) == True:
+        if is_vowel(digit):
             count += 1
         str /= 10
     return count
@@ -52,23 +52,32 @@ def is_vowel(char):
     elif char == "u":
         return True
     else:
-        return False
+        if char < "a":
+            print(char)
+            return True
+        elif char > "z":
+            print(char)
+            return True
+        else:
+            return False
 
 def count_consonants(str):
-    for i in range(0, len(str)+1):
-        letter = str % 10
-        count = 0
-        if is_vowel(letter):
+    count = 0
+    str = str.lower()
+    for i in range(0, len(str)):
+        letter = str[i]
+        if is_vowel(letter) == False:
             count += 1
-        str /= 10
-def prime_number(n):
-    if n % 2 == 1:
-        return True
-    else:
-        return False
+    return count
 
-def fact_digits(n):
-    pass
+def prime_number(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+
+# def fact_digits(n):
+#     pass
 
 # def fibonacci(n):
 #     pass
@@ -83,3 +92,4 @@ def fact_digits(n):
 # def char_histogram(string):
 #     pass
 #
+
